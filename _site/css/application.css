@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.detail-icon:after {
+.detail:after, .detail-icon:after {
   content: ".";
   display: block;
   height: 0;
@@ -385,7 +385,7 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  max-width: 850px; }
+  max-width: 960px; }
   .grid-box::after {
     clear: both;
     content: "";
@@ -482,12 +482,12 @@ a {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin-top: .5em;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   letter-spacing: -0.02em;
   line-height: 1.3em; }
 
 h1, .h1 {
-  font-size: 4.2rem;
+  font-size: 3.8rem;
   font-weight: 700; }
 
 h2, .h2 {
@@ -723,7 +723,7 @@ a.button {
   margin-right: -20px;
   padding: 1em 20px; }
   .section-slab h1, .section-slab h2, .section-slab h3, .section-slab h4, .section-slab h5, .section-slab h6, .section-slab .grid-box {
-    max-width: 850px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto; }
 
@@ -776,25 +776,32 @@ a.button {
 .nav-item + .nav-item {
   margin-left: 0.5em; }
 
+.section-slab.section-header {
+  padding-bottom: 0; }
+
 .header-logo {
   width: 200px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block; }
+  height: auto; }
 
 @media screen and (min-width: 600px) {
   .grid-item-padded {
-    padding-left: 2em;
     padding-right: 2em; } }
 
 .detail + .detail {
-  margin-top: 2em; }
+  margin-top: 1em; }
 
 .detail-icon {
   display: block;
   width: 50px;
-  height: auto; }
+  height: auto;
+  float: left;
+  margin-top: 10px; }
+
+.detail-words {
+  display: block;
+  width: calc(100% - 70px);
+  margin-left: 20px;
+  float: left; }
 
 .detail h4 {
   margin-bottom: -.5em; }
