@@ -4,6 +4,13 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.detail-icon:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -780,6 +787,17 @@ a.button {
   .grid-item-padded {
     padding-left: 2em;
     padding-right: 2em; } }
+
+.detail + .detail {
+  margin-top: 2em; }
+
+.detail-icon {
+  display: block;
+  width: 50px;
+  height: auto; }
+
+.detail h4 {
+  margin-bottom: -.5em; }
 
 img {
   width: 100%;

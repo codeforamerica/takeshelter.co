@@ -16,3 +16,20 @@
     }
   }
 }
+
+// Detail sections by the phone
+.detail + .detail {
+  margin-top: 2em;
+}
+
+// Detail icons
+.detail-icon {
+  display: block;
+  @extend %clearfix;
+  width: 50px;
+  height: auto;
+}
+
+.detail h4 {
+  margin-bottom: -.5em;
+}
