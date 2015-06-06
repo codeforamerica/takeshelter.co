@@ -721,7 +721,7 @@ a.button {
 .section-slab {
   margin-left: -20px;
   margin-right: -20px;
-  padding: 1em 20px; }
+  padding: 2em 20px; }
   .section-slab h1, .section-slab h2, .section-slab h3, .section-slab h4, .section-slab h5, .section-slab h6, .section-slab .grid-box {
     max-width: 960px;
     margin-left: auto;
