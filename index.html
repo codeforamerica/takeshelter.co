@@ -12,7 +12,7 @@ layout: default
 <section class="section-slab">
   <div class="grid-box">
     <div class="grid-item width-two-thirds grid-item-padded">
-      <h1>Find a safe place to shelter from a disaster in South Florida.</h1>
+      <h1>Find a safe place to shelter from a disaster in South Florida.<br /><span class="note">Text 754-202-3040.</span></h1>
 
       <div class="detail">
         <img class="detail-icon" src="{{ site.baseurl }}/images/icons/time.png" alt="">
@@ -84,6 +84,10 @@ var scrollScreen = function(id) {
   var wtf    = $(id);
   var height = wtf[0].scrollHeight;
   wtf.scrollTop(height);
+}
+var showEach = function(payload) {
+ setTimeout(function(){
+  
 }
 
 $(document).ready(function(){

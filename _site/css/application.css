@@ -845,6 +845,9 @@ a.button {
     color: #616161;
     margin: 0; }
 
+span.note {
+  color: #616161; }
+
 img {
   width: 100%;
   max-width: 100%; }
