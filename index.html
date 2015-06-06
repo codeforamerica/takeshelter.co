@@ -85,10 +85,8 @@ var scrollScreen = function(id) {
   var height = wtf[0].scrollHeight;
   wtf.scrollTop(height);
 }
-var showEach = function(payload) {
-  setTimeout(function(){
-    payload   
-  },time);
+var showEach = function(type,payload,time) {
+  setTimeout(function(){ $('#target').append( makeMessage(type,payload) ) }, time);
 }
 
 $(document).ready(function(){
