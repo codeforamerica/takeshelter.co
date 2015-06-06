@@ -49,3 +49,67 @@
 .detail h4 {
   margin-bottom: -.5em;
 }
+
+// PHONE ------ //
+.phone { margin-top: 1em; }
+
+.phone-screen {
+  display: block;
+  width: 100%;
+  border: 1px solid $color-grey-300;
+  border-radius: 20px;
+  padding: 1em;
+  height: 500px;
+  
+  background-color: white;
+  position: relative;
+}
+
+.phone-screen:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-grey-300;
+  border-radius: 100%;
+  
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.phone-message {
+  // width: 70%;
+  max-width: 70%;
+  width: auto;
+  background-color: $color-grey-300;
+  border-radius: 8px;
+  padding: 0.5em;
+  @extend %clearfix;
+}
+
+.phone-message.user {
+  background-color: $color-blue;
+  color: white;
+  float: right;
+
+}
+
+.phone-message + .phone-message {
+  margin-top: 1em;
+}
+
+//keyboard
+
+.phone-keyboard {
+  margin-top: 1em;
+  p {
+    color: $color-grey-700;
+    margin: 0;
+  }
+}
+
+.phone-keyboard input {
+
+}

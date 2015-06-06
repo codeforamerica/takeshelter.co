@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.detail:after, .detail-icon:after {
+.detail:after, .detail-icon:after, .phone-message:after {
   content: ".";
   display: block;
   height: 0;
@@ -805,6 +805,52 @@ a.button {
 
 .detail h4 {
   margin-bottom: -.5em; }
+
+.phone {
+  margin-top: 1em; }
+
+.phone-screen {
+  display: block;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 1em;
+  height: 500px;
+  background-color: white;
+  position: relative; }
+
+.phone-screen:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  margin-left: -20px; }
+
+.phone-message {
+  max-width: 70%;
+  width: auto;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5em; }
+
+.phone-message.user {
+  background-color: #399fd3;
+  color: white;
+  float: right; }
+
+.phone-message + .phone-message {
+  margin-top: 1em; }
+
+.phone-keyboard {
+  margin-top: 1em; }
+  .phone-keyboard p {
+    color: #616161;
+    margin: 0; }
 
 img {
   width: 100%;
