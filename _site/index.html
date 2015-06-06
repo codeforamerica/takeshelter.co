@@ -109,18 +109,24 @@ $(document).ready(function(){
       $('#target').append( makeMessage('user',theMessage) );
       // Clear input
       $('#phone-message').val('');
-    
+      // Scroll to bottom of screen
+      scrollScreen('#target');
 
     if (count == 0) { 
-      // They sent the zipcode, respond with shelter info
-      $('#target').append( makeMessage('server','Closest shelter:<br/><br/>Booker T. Washington Senior Center<br/>1200 NW 6th Ave, Miami FL 33136<br/>(~1.9mi away)') );
-      $('#target').append( makeMessage('server','Closest shuttle stop:<br/><br/>Stanley Axeldor Utd Towers<br/>1890 Brickell Ave, Miami, FL 33136<br/>(~7.1mi away)<br/><br/>If you need a pet-friendly shelter, reply PET') );
-      scrollScreen('#target');
+      setTimeout(function(){
+        // They sent the zipcode, respond with shelter info
+        $('#target').append( makeMessage('server','Closest shelter:<br/><br/>Booker T. Washington Senior Center<br/>1200 NW 6th Ave, Miami FL 33136<br/>(~1.9mi away)') );
+        $('#target').append( makeMessage('server','Closest shuttle stop:<br/><br/>Stanley Axeldor Utd Towers<br/>1890 Brickell Ave, Miami, FL 33136<br/>(~7.1mi away)<br/><br/>If you need a pet-friendly shelter, reply PET') );
+        $('#target').append( makeMessage('server','Para recibir esta información en español, emvie ESPANOL.') );
+        scrollScreen('#target');
+      }, 500);
     };
     if (count == 1) {
-      // They sent us 'PET', answer
-      $('#target').append( makeMessage('server','Closest pet shelter:<br/><br/>(No shuttle available)<br/><br/>Dr. Michael M. Krop Senior High 1410<br/>County Line Road, Miami, FL 33179<br/>(~15.3mi)') );
-      scrollScreen('#target');
+      setTimeout(function(){
+        // They sent us 'PET', answer
+        $('#target').append( makeMessage('server','Closest pet shelter:<br/><br/>(No shuttle available)<br/><br/>Dr. Michael M. Krop Senior High 1410<br/>County Line Road, Miami, FL 33179<br/>(~15.3mi)') );
+        scrollScreen('#target');
+      }, 500);
     };
     count++
   });
