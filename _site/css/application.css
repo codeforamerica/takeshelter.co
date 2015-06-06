@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.detail:after, .detail-icon:after, .phone-message:after {
+.detail:after, .detail-icon:after, .phone-message-container:after {
   content: ".";
   display: block;
   height: 0;
@@ -817,34 +817,27 @@ a.button {
   padding: 1em;
   height: 500px;
   background-color: white;
-  position: relative; }
+  position: relative;
+  overflow-y: scroll; }
 
-.phone-screen:after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #e0e0e0;
-  border-radius: 100%;
-  position: absolute;
-  bottom: 1em;
-  left: 50%;
-  margin-left: -20px; }
+.phone-message-container {
+  width: 100%; }
+
+.phone-message-container + .phone-message-container {
+  margin-top: 0.5em; }
 
 .phone-message {
   max-width: 70%;
   width: auto;
   background-color: #e0e0e0;
   border-radius: 8px;
-  padding: 0.5em; }
+  padding: 0.5em;
+  font-size: 0.9em; }
 
 .phone-message.user {
   background-color: #399fd3;
   color: white;
   float: right; }
-
-.phone-message + .phone-message {
-  margin-top: 1em; }
 
 .phone-keyboard {
   margin-top: 1em; }

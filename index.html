@@ -42,20 +42,16 @@ layout: default
       
       <!-- Begin phone -->
       <div class="phone">
-        <div class="phone-screen">
+        <div class="phone-screen" id="target">
           
-          <div class="phone-message server">
-            What's your zip code?
-          </div>
-          <div class="phone-message user">
-            47829
-          </div>
+          <div class="phone-message-container"><div class="phone-message server">What's your zip code?</div></div>
+          <!-- <div class="phone-message-container"><div class="phone-message user">47829</div></div> -->
 
         </div>
         <div class="phone-keyboard">
           <form action="#" id="phone-input">
             <p>Try it yourself! Use the keyboard.</p>
-            <input type="text" placeholder="Enter your message">
+            <input type="text" placeholder="Enter your message" id="phone-message">
           </form>
         </div>
       </div>
@@ -73,3 +69,49 @@ layout: default
     </div>
   </div>
 </section>
+
+<!-- Load jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Control the iPhone screen -->
+<script>
+var count = 0;
+
+var makeMessage = function(type,words) {
+  return '<div class="phone-message-container"><div class="phone-message '+type+'">'+words+'</div></div>';
+}
+var scrollScreen = function(id) {
+  var wtf    = $(id);
+  var height = wtf[0].scrollHeight;
+  wtf.scrollTop(height);
+}
+
+$(document).ready(function(){
+  $('#phone-input').submit(function(e){
+    // Stop the action
+    e.preventDefault();
+
+    // --- EVERY TIME ---
+      // Get the input
+      var theMessage = $('#phone-message').val();
+      // Put it in the dom
+      $('#target').append( makeMessage('user',theMessage) );
+      // Clear input
+      $('#phone-message').val('');
+    
+
+    if (count == 0) { 
+      // They sent the zipcode, respond with shelter info
+      $('#target').append( makeMessage('server','Closest shelter:<br/><br/>Booker T. Washington Senior Center<br/>1200 NW 6th Ave, Miami FL 33136<br/>(~1.9mi away)') );
+      $('#target').append( makeMessage('server','Closest shuttle stop:<br/><br/>Stanley Axeldor Utd Towers<br/>1890 Brickell Ave, Miami, FL 33136<br/>(~7.1mi away)<br/><br/>If you need a pet-friendly shelter, reply PET') );
+      scrollScreen('#target');
+    };
+    if (count == 1) {
+      // They sent us 'PET', answer
+      $('#target').append( makeMessage('server','Closest pet shelter:<br/><br/>(No shuttle available)<br/><br/>Dr. Michael M. Krop Senior High 1410<br/>County Line Road, Miami, FL 33179<br/>(~15.3mi)') );
+      scrollScreen('#target');
+    };
+    count++
+  });
+});
+</script>
