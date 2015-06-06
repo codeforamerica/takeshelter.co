@@ -1,0 +1,18 @@
+// The majority of our custom styles
+.header-logo {
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+// Padding section
+.grid-item-padded {
+  @include media($tablet-up) {
+    padding: {
+      left: 2em;
+      right: 2em;
+    }
+  }
+}

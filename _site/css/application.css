@@ -378,7 +378,7 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  max-width: 900px; }
+  max-width: 850px; }
   .grid-box::after {
     clear: both;
     content: "";
@@ -458,11 +458,11 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased; }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.7em;
   margin-top: 1em;
   margin-bottom: 1em; }
@@ -474,13 +474,13 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  margin-top: 1em;
+  margin-top: .5em;
   margin-bottom: .5em;
   letter-spacing: -0.02em;
   line-height: 1.3em; }
 
 h1, .h1 {
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   font-weight: 700; }
 
 h2, .h2 {
@@ -632,7 +632,7 @@ textarea {
   display: block;
   width: 100%;
   outline: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0 .7em;
   margin: .5em 0;
   height: 2em; }
@@ -655,7 +655,7 @@ button[type="reset"] {
   background-color: #e0e0e0;
   border: 0;
   border-radius: 4px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: center;
   width: 8em;
   margin-top: .5em;
@@ -692,7 +692,7 @@ label {
   color: white;
   border: 0;
   border-radius: 4px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
   margin-top: .5em;
@@ -714,9 +714,9 @@ a.button {
 .section-slab {
   margin-left: -20px;
   margin-right: -20px;
-  padding: 2em 20px; }
+  padding: 1em 20px; }
   .section-slab h1, .section-slab h2, .section-slab h3, .section-slab h4, .section-slab h5, .section-slab h6, .section-slab .grid-box {
-    max-width: 900px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto; }
 
@@ -768,3 +768,19 @@ a.button {
 
 .nav-item + .nav-item {
   margin-left: 0.5em; }
+
+.header-logo {
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+@media screen and (min-width: 600px) {
+  .grid-item-padded {
+    padding-left: 2em;
+    padding-right: 2em; } }
+
+img {
+  width: 100%;
+  max-width: 100%; }
