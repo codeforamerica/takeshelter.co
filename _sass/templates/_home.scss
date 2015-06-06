@@ -20,6 +20,12 @@
   }
 }
 
+// Alert
+.grid-item-alert {
+  background-color: lighten($color-red,45%);
+  padding: .5em 1em;
+}
+
 // Detail sections by the phone
 .detail {
   @extend %clearfix;
